@@ -1,0 +1,11 @@
+div- its a block level element
+	divide page content into blocks
+	div usually used to group paragraph images headings and links together
+
+span- its a inline level element
+	does not start a new line and take space according to content
+	span usually used on img,text,links.
+
+if we give two consecutive divs then they will be printed separately
+but
+if we give consecutive spans it will try to attach both according to width of page.

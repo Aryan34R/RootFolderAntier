@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bill</title>
+</head>
+<body>
+    <label for="value1">Price</label>
+    <input type="text" id="one"/>
+    <br/>
+    <label for="value2">quantity</label>
+    <input type="text" id="two"/>
+    <br/>
+    <label for="value3">bill</label>
+    <input type="text" id="three"/>
+    <br/>
+    <label for="value4">disc</label>
+    <input type="text" id="four"/>
+    <br/>
+    <label for="value5">net</label>
+    <input type="text" id="five"/>
+    <br/>
+    <input type="button" value="result" onclick="show()">
+
+</body>
+</html>
+<script>
+    function show(){
+        var a,b,c,d,e,disc;
+        a=document.getElementById("one").value;
+        b=document.getElementById("two").value;
+        c=a * b;
+        document.getElementById("three").value=c;
+       
+        disc=c*.10;
+        e= c - disc;
+        document.getElementById("four").value=disc;
+       
+        document.getElementById("five").value=e;
+    }
+</script>

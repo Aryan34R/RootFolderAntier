@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMPRACTICE</title>
+</head>
+<body>
+    <fieldset>
+        <legend>WOW</legend>
+        <form action="#" method="post" id="myForm">
+            <label for="#name">NAME:</label>
+            <input type="text" name="firstname" id="name">
+            <br>
+            <br>
+            <label for="#num">Ph. Number:</label>
+            <input type="text" name="ph.number" id="num">
+            <br>
+            <br>
+            <label for="#date1">DATE & TIME:</label>
+            <input type="datetime-local" name="date&time" id="date1">
+            <br>
+            <br>
+            <p>Genders</p>
+            <br>
+            <label for="#radio1">Male</label>
+            <input type="radio" name="male" id="radio1" >
+            <br>
+            <label for="#radio2">FeMale</label>
+            <input type="radio" name="female" id="radio2" >
+            <br>
+            <label for="#radio3">Others</label>
+            <input type="radio" name="Others" id="radio3" >
+            <br>
+            <br>
+            <label for="#colo">Color:</label>
+            <input type="color" name="color" id="colo">
+            <br>
+            <br>
+            <label for="submit1"> Submit The Form :</label>
+            <input type="submit" name="submit" id="submit1">
+        </form>
+    </fieldset>
+    
+</body>
+</html>
+
+<script>
+    const form = document.getElementById('myForm');
+
+function formDataToObject(formData) {
+  const jsonObject = {};
+  for (const [key, value] of formData.entries()) {
+    jsonObject[key] = value;
+  }
+  return jsonObject;
+};
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+  
+  const formData = new FormData(form);
+  const jsonObject = formDataToObject(formData);
+  const jsonString = JSON.stringify(jsonObject);
+  
+  const blob = new Blob([jsonString], { type: 'application/json' });
+
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+
+  link.download = 'json-me-convert-hogya.json';
+
+  document.body.appendChild(link);
+  link.click();
+
+  document.body.removeChild(link);
+  URL.revokeObjectURL(link.href);
+});
+</script>

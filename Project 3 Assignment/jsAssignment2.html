@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="income">Enter Income</label>
+    <input type="text"  id="inc">
+
+    <br>
+
+    <label for="tax">TAX</label>
+    <input type="text" id="tax1">
+    <br>
+    <br>
+    <input type="button" value="ok" onclick="show()">
+
+    <br><br><br><br><br>
+    <input type="button" value="start" onclick="startchange()">
+    <input type="button" value="stop" onclick="stop()"><br><br><br>
+
+    <p id="para">Aryan Sharma</p>
+    
+    <label for="hours">Hours</label>
+    <input type="text" id="hour">
+    <label for="minutes">Minute</label>
+    <input type="text" id="min">
+    <label for="seconds">seconds</label>
+    <input type="text" id="sec">
+    <br>
+    <input type="button" value="starttime" onclick="starttime()">
+
+   
+</body>
+</html>
+
+<script>
+    //  var x;
+    //     var i=0;
+    //     list=["red","green","yellow","blue"];
+     var a;
+     var b;
+     var i = 0;
+     list=["grey","black","brown","blue","red","yellow"];
+
+    function show(){
+    //     var i;
+    //     i=document.getElementById("inc").value;
+    //     // document.getElementById("tax1").value=t;
+    //     if(i < 300000){
+            
+    //         document.getElementById("tax1").value="NA";
+    //     }
+    //     else if(i > 300000 ){
+    //         document.getElementById("tax1").value=300;
+    //          if(i > 500000 ){
+    //         document.getElementById("tax1").value=500; 
+        
+    //      if(i > 700000){
+    //         document.getElementById("tax1").value=700; 
+    //     }
+    // }
+    //     }
+    var i;
+    i = document.getElementById("inc").value;
+    if(i > 700000){
+        document.getElementById("tax1").value=700;
+    }
+    else if(i > 500000){
+        document.getElementById("tax1").value=500;
+
+    }
+    else if(i > 300000){
+        document.getElementById("tax1").value=300;
+
+    }
+    else{
+        document.getElementById("tax1").value="N.A.";
+
+    }
+        
+    }
+/////////////////////////////////////////////////////////
+    
+    // function startchange(){
+    //    x= setInterval(colorchange,1000);
+
+    // }
+
+    // function colorchange()
+    // {
+    
+    //     document.bgColor=list[i];
+    //     i++;
+    //     if(i>4){
+    //         i=0;
+    //     }
+    // }
+    // function stop(){
+    //     clearInterval(x);
+    // }
+
+    function startchange(){
+        a = setInterval(colorchange,1000);
+       
+    }
+    
+    function colorchange(){
+        // document.bgColor=list[i];
+        b=document.getElementById("para");
+        b.style.color=list[i];
+        i++;
+        if(i>10){
+            i=0;
+        }
+    
+    }
+    function stop(){
+        clearInterval(a);
+    }
+    function starttime(){
+        setInterval(showtime,1000)
+         }
+         function showtime()
+         {
+            var d=new Date();
+            var ch=d.getHours();
+            var cm=d.getMinutes();
+            var cs=d.getSeconds();
+            hour.value=ch;
+            min.value=cm;               
+            sec.value=cs;
+
+            
+         }
+
+</script>

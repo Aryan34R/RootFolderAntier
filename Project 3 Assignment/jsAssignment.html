@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="years">Year</label>
+    <input type="text" id="year">
+    <br>
+    <br>
+    <label for="years">Year2</label>
+    <input type="text" id="year2">
+    <br>
+    <br>
+    <label for="date">Todays date</label>
+    <input type="text" id="date1">
+    <br>
+    <br>
+    <label for="day">DAY</label>
+    <input type="text" id="day1">
+    <br>
+    <br>
+    <label for="Hours">Hours</label>
+    <input type="text" id="hour1">
+    <br>
+    <br>
+    <label for="minutes">MINUTES</label>
+    <input type="text" id="min">
+    <br>
+    <br>
+    <label for="seconds">Seconds</label>
+    <input type="text" id="seconds">
+    <br>
+    <br>
+    <label for="time">Current Time</label>
+    <input type="text" id="time1">
+    <br><br><br>
+    
+</body>
+</html>
+<script>
+    var a;
+    a = new Date();
+    var h1= a.getYear();
+    document.getElementById("year").value=h1;
+    var h2= a.getFullYear();
+    document.getElementById("year2").value=h2;
+    var d1= a.getDate();
+    document.getElementById("date1").value=d1;
+    var d2= a.getDay();
+    document.getElementById("day1").value=d2;
+    var h3= a.getHours();
+    document.getElementById("hour1").value=h3;
+    var m1= a.getMinutes();
+    document.getElementById("min").value=m1;
+    var s1= a.getSeconds();
+    document.getElementById("seconds").value=s1;
+    var t1= a.getTime();
+    document.getElementById("time1").value=t1;
+   
+   
+</script>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment</title>
+</head>
+<body>
+    <table border="10px solid black" width="300px" height="100px">
+        <tr>
+            <td colspan="3" align="center">
+                Student Result
+            </td>
+            
+        </tr>
+        <tr>
+            <td align="center">Student Name</td>
+            <td >
+                <label for="name"></label>
+                <input type="text" id="name"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Physics</td>
+            <td >
+                <label for="Physics"></label>
+                <input type="text" id="phy"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Chemistry</td>
+            <td >
+                <label for="Chemistry"></label>
+                <input type="text" id="chem"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Math</td>
+            <td >
+                <label for="Math"></label>
+                <input type="text" id="math"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Total</td>
+            <td >
+                <label for="Total"></label>
+                <input type="text" id="tot"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Percenatge</td>
+            <td >
+                <label for="Percenatge"></label>
+                <input type="text" id="per"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Division</td>
+            <td >
+                <label for="Division"></label>
+                <input type="text" id="divi"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="Result" onclick="show()">
+            </td>
+            <td align="center">
+                <input type="button" value="Reset" onclick="refresh()">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <table border="2px solid black" width="200px" height="50px">
+        <tr>
+            <td colspan="3" align="center">
+                Car Parking
+
+            </td>
+        </tr>
+        <tr>
+            <td>In Time</td>
+            <td align="middle">
+                <label for="inhour" > Hours</label>
+                <input type="text"  id="hour1">
+            </td>
+            <td align="middle">
+                <label for="inminute"></label> Minutes
+                <input type="text" id="minute1">
+            </td>
+        </tr>
+        <tr>
+        <td>Out Time</td>
+            <td align="middle">
+                <label for="outhour"> Hours</label>
+                <input type="text"  id="hour2">
+            </td>
+            <td align="middle">
+                <label for="outminute"> Minutes</label>
+                <input type="text" id="minute2">
+            </td>
+        </tr>
+        <tr>
+            <td >
+                TotalTime
+            </td>
+            <td align="middle">
+                <label for="totalhour"> Hours</label>
+                <input type="text"  id="hour3">
+            </td>
+            <td align="middle">
+                <label for="totalminute"> Minutes</label>
+                <input type="text" id="minute3">
+            </td>
+        </tr>
+        <tr>
+            <td align="middle" >
+                Bill
+            </td>
+            <td align="middle" colspan="2">
+                <input type="text" id="bill">
+            </td>
+        </tr>
+        <tr align="middle">
+            <td colspan="3">
+                <input type="button" value="OK" onclick="pop()">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+<script>
+    function show(){
+        var name,p,c,m,total,percentage,division,result,reset;
+        name=document.getElementById("name").value;
+        p=document.getElementById("phy").value;
+        c=document.getElementById("chem").value;
+        m=document.getElementById("math").value;
+        total=  parseInt(p)+parseInt(c)+parseInt(m);
+        document.getElementById("tot").value=total;
+        percentage= total/3;
+        document.getElementById("per").value=percentage;
+        if(percentage>=60)
+        document.getElementById("divi").value="first";
+        else if(percentage>=45||percentage<=59)
+        document.getElementById("divi").value="second";
+        else
+        document.getElementById("divi").value="third";
+
+
+    }
+    function refresh(){
+        document.getElementById("name").value="";
+        document.getElementById("phy").value="";
+        document.getElementById("chem").value="";
+        document.getElementById("math").value="";
+        document.getElementById("tot").value="";
+        document.getElementById("per").value="";
+        document.getElementById("divi").value="";
+    }
+    function pop(){
+        var h1,h2,h3,m1,m2,m3,h4,m4,t,amount;
+        h1=document.getElementById("hour1").value;
+        m1=document.getElementById("minute1").value;
+        h2=document.getElementById("hour2").value;
+        m2=document.getElementById("minute2").value;
+        h3=h2-h1;
+        m3=m2-m1;
+        if(m3<0){
+        m3=m3+60;
+        h3=h3-1;
+        }
+        document.getElementById("hour3").value=h3;
+        document.getElementById("minute3").value=m3;
+        h4=h3*60;
+        m4=m3;
+        t=h4+m4;
+        amount=(t/5)*2;
+        document.getElementById("bill").value=amount;
+
+    }
+</script>

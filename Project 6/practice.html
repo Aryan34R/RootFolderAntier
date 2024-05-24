@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+        <fieldset>
+            <legend>String methods</legend>
+
+            <label for="text1">Enter Name:</label>
+            <input type="text" value="" id="text1">
+
+        <br>
+        <br>
+        <label for="result1">Result:</label>
+        <input type="text" value="" id="result1">
+        <br><br>
+        <input type="button" value="Upper" onclick="show1()">
+        <input type="button" value="Lower" onclick="show2()">
+        <input type="button" value="length" onclick="show3()"><br><br>
+        <input type="button" value="Index" onclick="show4()">
+        <input type="button" value="CharLoc" onclick="show5()">
+        <input type="button" value="repeat" onclick="show6()">
+        <br><br>
+        <input type="button" value="Trim" onclick="show7()">
+        <input type="button" value="Startswith" onclick="show8()">
+        <input type="button" value="Endswith" onclick="show9()">
+        <br><br>
+        <input type="button" value="Substr" onclick="show10()">
+        <input type="button" value="Substring" onclick="show11()">
+
+        </fieldset>
+   
+</body>
+</html>
+
+<script>
+    function show1(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.toUpperCase();
+    }
+    function show2(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.toLowerCase();
+    }
+    function show3(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.length;
+    }
+    function show4(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.indexOf('r');
+    }
+    function show5(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.charAt('3');
+    }
+    function show6(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.repeat('4');
+    }
+    function show7(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.trim();
+    }
+    function show8(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.startsWith('ar');
+    }
+    function show9(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.endsWith('sharma');
+    }
+    function show10(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.substr(2,3);
+    }
+    function show11(){
+        var a;
+        a=document.getElementById("text1").value;
+        document.getElementById("result1").value=a.substring(2,7);
+    }
+</script>
