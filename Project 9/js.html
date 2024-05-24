@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .fa-eye{
+            cursor: pointer;
+        }
+        #nmerror{
+            color: red;
+        }
+        #agerror{
+            color: red;
+        }
+        #passerror{
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="#" method="post"z>
+        <table  cellpadding="3px" width="300px" height="200px">
+            <tr>
+                <td align="center" colspan="2">Validation</td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="#name1">Name:</label>
+                </td>
+                <td>
+                    <input type="text" onblur="show(this.value)" id="name1">
+                    <div id="nmerror"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="#age1">Age:</label>
+                </td>
+                <td>
+                    <input type="text" onblur="ageblur(this.value)" id="age1">
+                    <div id="agerror"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="#pass1">Password:</label>
+                </td>
+                <td>
+                    <input type="password" onblur="passblur(this.value)" id="pass1">
+                    <span class="password-toggle-icon"><i onclick="convert()" class="fas fa-eye"></i></span>
+                    <div id="passerror"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="OK" onclick="">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
+<script>
+    function show(val){
+        if(val.trim()==""){
+        nmerror.innerHTML="Please Enter you Name*"
+        }
+    }
+    function ageblur(val){
+        if(val.trim()==""){
+            agerror.innerHTML="Please enter your age*"
+        }
+        else if(parseInt(val)<18){
+            agerror.innerHTML="your age is less than 18*"
+        }
+        else
+        ageerror.innerHTML="";
+    }
+    function passblur(val){
+        if(val.length<5){
+            passerror.innerHTML="password less than 5*"
+        }
+    }
+    function convert(){
+        if(pass1.type=="password"){
+        pass1.type="text"
+        }
+        else{
+        pass1.type="password"
+        }
+    }
+</script>

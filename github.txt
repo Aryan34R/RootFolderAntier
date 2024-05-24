@@ -1,7 +1,7 @@
 go to folder on vs code
 click "ctrl+shift+~" to open terminal
 git init
-git add ,
+git add .
 git status
 git commit -M main
 git config --global user.email ""
