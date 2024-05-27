@@ -1,0 +1,22 @@
+.cls{
+    /* border: ;
+    border-style: ;
+    border-color: ;
+    border-width: ; */
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    padding: 30px;
+    margin: 10px;
+    box-sizing: content-box;
+    background-color: rgb(117, 117, 117);
+}
+.cls2{
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+    padding: 30px;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: rgb(117, 117, 117);
+}

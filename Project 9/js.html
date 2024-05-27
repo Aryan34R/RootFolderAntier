@@ -11,12 +11,18 @@
         }
         #nmerror{
             color: red;
+            font-size: small;
+            font-style: italic;
         }
         #agerror{
             color: red;
+            font-size: small;
+            font-style: italic;
         }
         #passerror{
             color: red;
+            font-size: small;
+            font-style: italic;
         }
     </style>
 
@@ -82,7 +88,7 @@
     }
     function passblur(val){
         if(val.length<5){
-            passerror.innerHTML="password less than 5*"
+            passerror.innerHTML="Password less than 5*"
         }
     }
     function convert(){
