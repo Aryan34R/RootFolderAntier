@@ -5,10 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* decendent combinators */
+        /* div p{
+            color: aqua;
+        } */
+        /* child combinator */
+        /* div > p{
+            color: aqua;
+        } */
+        /* Adjacent Sibling combinator */
+        /* h1 + p{
+            color: orangered;
+         }  */
+         /* general sibling combinator */
+         h1 ~ p{
+            color: red;
+         }
+    </style>
 </head>
 <body>
-    <div class="cls">This is a box- content box</div>
-    <div class="cls2">This is another box- BorderBox</div>
-    
+    <!-- <div class="cls">This is a box- content box</div>
+    <div class="cls2">This is another box- BorderBox</div> -->
+    <!-- <div class="parent">
+        <p class="child">child 1</p>
+        <p class="child">child 2</p>
+    </div>
+    <div>
+
+        <p class="child">child 3</p>
+
+    </div> -->
+     <!-- Adjacent Sibling combinator  -->
+     <!-- general SIbling Combinator -->
+    <h1>HEading</h1>
+    <p class="child">child 1</p>
+    <p class="child">child 2</p>
+    <p class="child">child 3</p>
 </body>
 </html>

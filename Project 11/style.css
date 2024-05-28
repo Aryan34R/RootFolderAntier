@@ -1,0 +1,29 @@
+.maPa{
+
+    height: 200px;
+    background-color: blueviolet;
+    width: 200px;
+    margin: 100px 0px 10px 0px;
+    border-radius: 10px;
+    
+}
+.static{
+
+}
+.fixed{
+    position: fixed;
+}
+.relative{
+    position: relative;
+    left: 100px; 
+    top: 10px;   
+}
+.absolute{
+    position: absolute;
+    right: 30px;
+    
+}
+.sticky{
+    position: sticky;
+    
+}
