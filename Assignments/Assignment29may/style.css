@@ -1,0 +1,59 @@
+p::first-letter{
+    color: rgb(255, 0, 0);
+}
+p::after{
+    content: " * ";
+    color: red;
+}
+#nam:focus{
+    background-color: black;
+}
+#addr:hover{
+    width: 100%;
+}
+#qual:hover{
+    width: 100%;
+    background-color: blueviolet;
+}
+#rad1:focus{
+    accent-color: red;
+}
+#rad2:focus{
+    accent-color: red;
+}
+#rad3:focus{
+    accent-color: red;
+}
+#rad1:checked + label{
+    color: rgb(29, 221, 221);
+}
+#rad2:checked + label{
+    color: rgb(29, 221, 221);
+}
+#rad3:checked + label{
+    color: rgb(29, 221, 221);
+}
+#lab1::after{
+
+    color: blue;
+}
+.sub1:hover{
+    display: none;
+}
+
+a:visited{
+    color: rgb(255, 0, 0);
+}
+a{
+    color: rgb(0, 0, 0);
+}
+
+a:active{
+    color: aqua;
+}
+/* a:hover{
+    color: coral;
+} */
+.a{
+    text-decoration: none;
+}

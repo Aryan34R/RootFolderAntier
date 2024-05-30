@@ -1,0 +1,43 @@
+.smbox1{
+    border: 2px solid blue;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    z-index: 1;
+    
+
+}
+.smbox2{
+    border: 2px solid red;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: relative;
+    bottom: 50px;
+    z-index: -1;
+}
+.imbox1{
+    border: 2px solid black;
+    height: 510px;
+    width: 420px;
+    z-index: -1;
+
+}
+.imbox2{
+    height: 10px;
+    width: 50px;
+    position: relative;
+    left: 240px;
+    z-index: 1;
+    bottom: 240px;
+}
+.hvr{
+    height: 300px;
+    width: 400px;
+}
+.hvr:hover
+{
+    content: url(2e3a4fb8b938bada641f0eb29c17ea0b.jpg);
+    height: 300px;
+    width: 400px;
+}
