@@ -1,0 +1,232 @@
+body{
+    background: #d7d6d4;
+}
+.container{
+    display:flex;
+    margin: 10px;
+    height: 70px;
+    width: 100%;
+}
+.headbox1{
+    margin: 40px 20px 40px 20px;
+    height: 70px;
+    width: 20%;
+    font-size: x-large;
+    border-top: 2px solid black;
+    text-align: center;
+    font-style: italic;
+    
+
+}
+.headbox2 {
+    display:flex;
+    justify-content: space-between;
+    margin: 40px 20px 40px 20px;
+    height: 30px;
+    width: 80%;
+    border-top: 2px solid black;
+    
+
+}
+.headbox2a{
+    padding-top: 20px;
+}
+.headbox2a a{
+    text-decoration: none;
+    color: rgb(111, 88, 133);
+    margin: 20px;
+    font-size: large;
+}
+.headbox2a a:hover{
+    color: black;
+    
+
+}
+.headbox2{
+    font-size: large;
+    
+}
+.search{
+    position: relative;
+    left: 2px;
+}
+.labe{
+    color: azure;
+    background-color: black;
+    padding: 4px; 
+    border: 2px solid black;
+}
+
+.ma{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 10px 10px 10px;
+    height: 700px;
+    width: 100%;
+    
+
+}
+.ma1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;
+    width: 15%;
+}
+.ma1d{
+    writing-mode:vertical-rl;
+    word-spacing: 10px;
+    rotate: 180;
+}
+.ma2{    
+    height: 100vh;
+    width: 60%;
+}
+.ma3{
+    height: 100vh;
+    width: 25%;
+}
+.ma2 h5{
+    font-style: italic;
+    word-spacing: 10px;
+   
+}
+.mb1 h1{
+    font-style: italic;
+    margin-left: 120px;
+    font-size: 100px;
+    margin-top: 10px;
+}
+.mb2{
+    display: flex;
+
+}
+.mba1{
+    padding: 30px;
+}
+.mba1 h2{
+    font-style: italic;
+    font-size: x-large;
+}
+.mba1 p{
+    font-size: larger;
+}
+.bobw1{
+    display: flex;
+    height: 60px;
+    width: 300px;
+    justify-content: left;
+}
+.bobx1{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.bobx2{
+    position: relative;
+    text-align: center;
+    bottom: 10px;
+    left: 10px;
+    color:  rgba(0, 0, 0, 0.4);
+}
+.bobw1:hover{
+   background-color: azure;
+}
+.bobw2{
+    display: flex;
+    height: 60px;
+    width: 300px;
+    justify-content: left;
+}
+.bobw2:hover{
+    background-color: azure;
+ }
+.boby1{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.boby2{
+    position: relative;
+    text-align: center;
+    bottom: 10px;
+    left: 10px;
+    color:  rgba(0, 0, 0, 0.4);
+}
+.bobw3{
+    display: flex;
+    height: 60px;
+    width: 300px;
+    justify-content: left;
+}
+.bobw3:hover{
+    background-color: azure;
+ }
+.bobz1{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.bobz2{
+    position: relative;
+    text-align: center;
+    bottom: 10px;
+    left: 10px;
+    color:  rgba(0, 0, 0, 0.4);
+}
+.bocw1{
+    display: flex;
+    height: 60px;
+    width: 300px;
+    justify-content: left;
+}
+.bocx1{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.bocx2{
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto Mono', sans-serif;
+    color:  rgba(0, 0, 0, 0.4);
+    bottom: 10px;
+    left: 10px;
+}
+.bocw2{
+    display: flex;
+    height: 60px;
+    width: 300px;
+    justify-content: left;
+}
+.bocy1{
+    margin-top: 40px;
+    margin-left: 5px;
+}
+.bocy2{
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto Mono', sans-serif;
+    color:  rgba(0, 0, 0, 0.4);
+    margin-top: 40px;
+    bottom: 10px;
+    left: 10px;
+}
+.bocw3{
+    display: flex;
+    height: 60px;
+    width: 300px;
+    justify-content: left;
+}
+.bocz1{
+    margin-top: 75px;
+    margin-left: 5px;
+}
+.bocz2{
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto Mono', sans-serif;
+    color:  rgba(0, 0, 0, 0.4);
+    margin-top: 75px;
+    bottom: 10px;
+    left: 10px;
+}
+
+
