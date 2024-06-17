@@ -1,0 +1,100 @@
+body{
+    
+}
+.bod{
+    display: inline-flex;
+}
+.main{
+    display: flex;
+}
+.main div{
+    
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    opacity: 50%;
+}
+.main2{
+    display: flex;
+}
+.main2 div{
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    opacity: 50%;
+}
+.main3{
+    display: flex;
+}
+.main3 div{
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    opacity: 50%;
+}
+.main4{
+    display: flex;
+}
+.main4 div{
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    opacity: 50%;
+}
+.box1{
+    transform: perspective(900px) scaleZ(2) rotateY(320deg);
+   
+}
+.box2{
+    transform: scaleZ(2);
+    
+}
+.box3{
+    transform: perspective(900px) scaleZ(1) rotateY(40deg);
+  
+}
+.box4{
+    transform: perspective(900px) scaleZ(0.5) rotateY(80deg);
+   
+}
+.box5{
+    transform: perspective(900px) scaleZ(2) rotateY(85deg);
+   
+}
+.box6{
+    transform: perspective(900px) scaleZ(2) rotateY(103deg);
+
+}
+.box7{
+    transform: perspective(900px) scaleZ(2) rotateY(130deg);
+    
+}
+.box8{
+    transform: perspective(900px) scaleZ(2) rotateY(150deg);
+  
+}
+.box9{
+    transform: perspective(900px) scaleZ(2) rotateY(180deg);
+
+    
+}
+.box10{
+    transform: perspective(900px) scaleZ(2) rotateY(200deg);
+    
+}
+.box11{
+    transform: perspective(900px) scaleZ(2) rotateY(230deg);
+    
+}
+.box12{
+    transform: perspective(900px) scaleZ(2) rotateY(280deg);
+   
+} 

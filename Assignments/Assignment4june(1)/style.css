@@ -1,0 +1,98 @@
+
+.bod1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bod1 div{
+    background-color: yellow;
+    opacity: 0.6;
+    border: 1px solid black;
+    height: 50px;
+    width:50px;
+}
+.bod1a{
+    transform: rotateY(320deg) skewY(0deg);
+    position: relative;
+    top: 0px;
+    right: -5px;
+}
+.bod1b{
+    transform: rotateY(1deg) ;
+}
+.bod1c{
+    transform: rotateY(1deg) skewY(1deg) ;
+    position: relative;
+    top: 1px;
+    right: 1px;
+}
+
+.bod2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 1px;
+    right: 1px;
+}
+.bod2 div{
+    border: 1px solid black;
+    height: 50px;
+    width:50px;
+    background-color: red;
+    opacity: 0.5;
+}
+
+.bod2a{
+    transform: rotateY(1deg) skewY(1deg) ;
+    position: relative;
+    top: 1px;
+    right: 1px;
+}
+.bod2b{
+    transform: rotateY(1deg) skewY(1deg) ;
+    position: relative;
+    top: 1px;
+    right: 1px;
+}
+.bod2c{
+    transform: rotateY(1deg) skewY(1deg) ;
+    position: relative;
+    top: 1px;
+    right: 1px;
+}
+.bod3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 1px;
+    right: 1px;
+    z-index: -1;
+}
+.bod3 div{
+    border: 1px solid black;
+    height: 50px;
+    width:50px;
+    background-color:blue;
+    opacity: 0.5;
+}
+
+.bod3a{
+    transform: rotateY(1deg) skewY(1deg) ;
+    position: relative;
+    top: 1px;
+    right: 1px;
+}
+.bod3b{
+    transform: rotateY(1deg) skewY(1deg) ;
+    position: relative;
+    top: 1px;
+    right: 1px;
+}
+.bod3c{
+    transform: rotateY(1deg) skewY(1deg) ;
+    position: relative;
+    top: 1px;
+    right: 1px;
+}

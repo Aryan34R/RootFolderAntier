@@ -15,8 +15,6 @@ body{
     border-top: 2px solid black;
     text-align: center;
     font-style: italic;
-    
-
 }
 .headbox2 {
     display:flex;
@@ -25,8 +23,6 @@ body{
     height: 30px;
     width: 80%;
     border-top: 2px solid black;
-    
-
 }
 .headbox2a{
     padding-top: 20px;
@@ -39,12 +35,9 @@ body{
 }
 .headbox2a a:hover{
     color: black;
-    
-
 }
 .headbox2{
-    font-size: large;
-    
+    font-size: large;   
 }
 .search{
     position: relative;
@@ -56,15 +49,12 @@ body{
     padding: 4px; 
     border: 2px solid black;
 }
-
 .ma{
     display: flex;
     justify-content: space-evenly;
     margin: 50px 10px 10px 10px;
     height: 700px;
     width: 100%;
-    
-
 }
 .ma1{
     display: flex;
@@ -100,7 +90,6 @@ body{
 }
 .mb2{
     display: flex;
-
 }
 .mba1{
     padding: 30px;

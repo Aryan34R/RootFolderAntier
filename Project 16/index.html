@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 25px;
+        }
+        body{
+            height: 100vh;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            border: 2px solid black;
+            width: 600px;
+            display: grid;
+            grid-template-rows: repeat(3, 100px);
+            /* grid-template-columns:  200px 200px 200px; */
+            /* grid-template-columns: repeat(2, 200px) 200px; */
+            /* grid-template-columns: repeat(2, 200px) 1fr; */
+            /* grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 10px; */
+            grid-template-columns: 1fr 2fr 3fr;
+            grid-column-gap: 10px;
+            /* grid-gap: 10px; */
+            /* grid-row-gap: 10px; */
+            /* grid-column-gap: 10px; */
+            /* background-color: yellowgreen; */
+            /* color: aqua; */
+        }
+        .box-1{
+            background-color: blueviolet;
+        }
+        .box-2{
+            background-color: rgb(149, 55, 92);
+        }
+        .box-3{
+            background-color: rgb(40, 83, 43);
+        }
+        .box-4{
+            background-color: rgb(193, 0, 84);
+        }
+        .box-5{
+            background-color: rgb(111, 16, 200);
+        }
+        .box-6{
+            background-color: rgb(212, 212, 212);
+        }
+        .box-7{
+            background-color: rgb(255, 0, 200);
+        }
+        .box-8{
+            background-color: rgb(0, 168, 149);
+        }
+        .box-9{
+            background-color: rgb(66, 1, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+        <div class="box-3"></div>
+        <div class="box-4"></div>
+        <div class="box-5"></div>
+        <div class="box-6"></div>
+        <div class="box-7"></div>
+        <div class="box-8"></div>
+        <div class="box-9"></div>
+    </div>
+</body>
+</html>
+<!-- 
+what is fractional unit?
+body ko viewport and nav ko 100%
+    calc() function, also give property
+    100vh-navheight
+    align content- work on lines upper and lower and attch thrm
+    align items- have some space between them.
+    align-self-
+    *intel.com scroll down 8 boxes to perform.
+    *img task
+-->

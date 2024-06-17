@@ -1,0 +1,58 @@
+.main{
+    display: inline-block;
+}
+.main1{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    height: 400px;
+    width: 400px;
+    z-index: -2;
+    background-color: brown;
+    margin: 100px;
+}
+.main1 div{
+    
+    border: 2px solid black;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    transform: scale();
+}
+.main2{
+    display: flex;
+    margin: 20px;
+    z-index: 2;
+    background-color: blueviolet;
+}
+.main2 div{
+    border: 2px solid black;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+
+}
+
+.box4{
+    
+    transform: rotateY(40deg);
+
+}
+.box1{
+   
+   transform: rotateY(320deg) scale(2);
+   
+   
+   
+}
+.box2{
+   
+    transform: scale(2);
+
+}
+.box3{
+    
+    transform: rotateY(40deg) scale(2);
+    
+
+}

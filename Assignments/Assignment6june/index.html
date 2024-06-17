@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <fieldset>
+        <form action="#" method="post" oninput="ded.value=parseInt(sal.value)*(parseInt(pf.value)/100),gross.value=parseInt(sal.value)-parseInt(ded.value)">
+            <table >
+                <tr>
+                    <td><label for="#sal">Salary: </label></td>
+                    <td><input type="text" name="salary" id="sal"></td>
+                </tr>
+                <tr>
+                    <td><label for="#pf">PF:</label></td>
+                    <td><input type="text" name="providentfund" id="pf"></td>
+                </tr>
+                <tr>
+                    <td><label for="#ded">Deduction:</label></td>
+                    <td><input type="text" name="deduction" id="ded" disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="#gross">Gross Salary:</label></td>
+                    <td><input type="text" name="grosssalary" id="gross" disabled></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="reset" onclick="show()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
+<script>
+    function show(){
+        document.getElementById("sal").value="";
+        document.getElementById("pf").value="";
+        document.getElementById("ded").value="";
+        document.getElementById("gross").value="";
+    }
+</script>
