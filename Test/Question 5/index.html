@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question5</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(23, 212, 229);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1{
+            height: 250px;
+            width: 250px;
+            border-bottom: 1px solid black;
+            /* border: 1px solid black; */
+            border-top: none;
+            border-radius: 0px 0px 100px 100px;
+            background-color: white;
+            z-index: +1;
+        }
+        .box2{
+            height: 20px;
+            width: 250px;
+            /* border: 1px solid black; */
+            border-radius: 80%;
+            position: absolute;
+            top: 260px;
+            background-color: white;
+        }
+        .box3{
+            height: 15px;
+            width: 220px;
+            /* border: 1px solid black; */
+            border-radius: 99%;
+            position: absolute;
+            top: 267px;
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            background-color: brown;
+        }
+        .box4{
+            height: 100px;
+            width: 80px;
+            border-top: 20px solid white;
+            border-right: 20px solid white;
+            border-bottom: 20px solid white;
+            border-left: 20px solid white;
+            position: absolute;
+            top: 300px;
+            right: 580px;
+            border-radius: 90px;
+        }
+        .box5{
+            height: 100px;
+            width: 450px;
+            background-color: white;
+            border-radius: 99%;
+            position: absolute;
+            top: 470px;
+            transform: rotateY(40deg);
+            z-index: 0;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+</body>
+</html>

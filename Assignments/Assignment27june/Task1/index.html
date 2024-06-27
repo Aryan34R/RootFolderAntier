@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+            background-color: gray;
+
+        }
+        .box{
+            height: 20px;
+            width: 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: lightseagreen;
+            animation-name: MyAni;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+        }
+        @keyframes MyAni{
+            0%{
+                transform: translateX(-100px);
+            }
+            20%{
+                transform: translateY(-200px) scale(2);
+            }
+            40%{
+                transform:  translateX(100px) translateY(200px) scale(5);
+            }
+            60%{
+                transform: translateX(200px) translateY(-100px) scale(10);
+            }
+            80%{
+                transform: translateX(-500px) translateY(200px) scale(1);
+            }
+            100%{
+               transform: translateX(-100px) translateY(100px) scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+
+        </div>
+    </div>
+    
+</body>
+</html>

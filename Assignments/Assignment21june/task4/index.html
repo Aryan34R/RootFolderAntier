@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Calculator</title>
+    <style>
+        .main{
+            margin: 100px 50% 100px 40%;
+            height: 500px;
+            width: 280px;
+            /* border: 1px solid black; */
+            background-color: #1c1c1c;
+            border-radius: 22px;
+        }
+        .container-1{
+            height: 35%;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: end;
+            color: white;
+            font-size: 50px;
+            
+            /* border: 1px solid blue; */
+        }
+        .container-1 div{
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        .container-2{
+            height: 65%;
+            width: 100%;
+            margin-top: 0px;
+            margin-left: 10px;
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-row-gap: 5px;
+            grid-column-gap: 5px;
+        }
+        .container-2 button{
+            height: 50px;
+            width: 50px;
+            border-radius: 30px;
+            border: none;
+            font-size: large;
+            font-weight: 500
+        }
+        .inbox-1{
+            grid-area: 1/1/2/2;
+            
+        }
+        .inbox-2{
+            grid-area: 1/2/2/3;
+        }
+        .inbox-3{
+            grid-area: 1/3/2/4;
+        }
+        .inbox-4{
+            grid-area: 1/4/2/5;
+        }
+        .inbox-5{
+            grid-area: 2/1/3/2;
+        }
+        .inbox-6{
+            grid-area: 2/2/3/3;
+        }
+        .inbox-7{
+            grid-area: 2/3/3/4;
+        }
+        .inbox-8{
+            grid-area: 2/4/3/5;
+        }
+        .inbox-9{
+            grid-area: 3/1/4/2;
+        }
+        .inbox-10{
+            grid-area: 3/2/4/3;
+        }
+        .inbox-11{
+            grid-area: 3/3/4/4;
+        }
+        .inbox-12{
+            grid-area: 3/4/4/5;
+        }
+        .inbox-13{
+            grid-area: 4/1/5/2;
+        }
+        .inbox-14{
+            grid-area: 4/2/5/3;
+        }
+        .inbox-15{
+            grid-area: 4/3/5/4;
+        }
+        .inbox-16{
+            grid-area: 4/4/5/5;
+        }
+        .inbox-17{
+            grid-area: 5/1/6/3;
+           
+        }
+        .inbox-18{
+            grid-area: 5/3/6/4;
+        }
+        .inbox-19{
+            grid-area: 5/4/6/5;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container-1">
+            <div class="upbox-1">
+                0
+            </div>
+        </div>
+        <div class="container-2">
+            <div class="inbox-1">
+                <button name="AllClear" style="background-color: #D4D4D2; color: black;" >
+                    AC
+                </button>
+            </div>
+            <div class="inbox-2">
+                <button name="NegativeValue" style="background-color: #D4D4D2; color: black;"  >
+                   <span style="font-size: small;vertical-align: super;">+</span>/-
+                </button>
+            </div>
+            <div class="inbox-3">
+                <button name="Percentage" style="background-color: #D4D4D2; color: black;">
+                    %
+                </button>
+            </div>
+            <div class="inbox-4">
+                <button name="Divide" style="background-color: #ff9500; color: white;">
+                    ÷
+                </button>
+            </div>
+            <div class="inbox-5">
+                <button name="Seven" style="background-color: #505050; color: white;">
+                    7
+                </button>
+            </div>
+            <div class="inbox-6">
+                <button name="Eight" style="background-color: #505050; color: white;">
+                    8
+                </button>
+            </div>
+            <div class="inbox-7">
+                <button name="Nine" style="background-color: #505050; color: white;">
+                    9
+                </button>
+            </div>
+            <div class="inbox-8">
+                <button name="Multiply" style="background-color: #ff9500; color: white;">
+                    x
+                </button>
+            </div>
+            <div class="inbox-9">
+                <button name="Four" style="background-color: #505050; color: white;">
+                    4
+                </button>
+            </div>
+            <div class="inbox-10">
+                <button name="Five" style="background-color: #505050; color: white;">
+                    5
+                </button>
+            </div>
+            <div class="inbox-11">
+                <button name="Six" style="background-color: #505050; color: white;">
+                    6
+                </button>
+            </div>
+            <div class="inbox-12">
+                <button name="Minus" style="background-color: #ff9500; color: white;">
+                    -
+                </button>
+            </div>
+            <div class="inbox-13">
+                <button name="One" style="background-color: #505050; color: white;">
+                    1
+                </button>
+            </div>
+            <div class="inbox-14">
+                <button name="Two" style="background-color: #505050; color: white;">
+                    2
+                </button>
+            </div>
+            <div class="inbox-15">
+                <button name="Three" style="background-color: #505050; color: white;">
+                    3
+                </button>
+            </div>
+            <div class="inbox-16">
+                <button name="Plus" style="background-color: #ff9500; color: white;">
+                    +
+                </button>
+            </div>
+            <div class="inbox-17">
+                <button name="Zero" style="width: 120px;text-align:left;margin-left: 1px;background-color: #505050; color: white;">
+                   &nbsp; 0
+                </button>
+            </div>
+            <div class="inbox-18">
+                <button name="Dot" style="background-color: #505050; color: white;">
+                    .
+                </button>
+            </div>
+            <div class="inbox-19">
+                <button name="Equal" style="background-color: #ff9500; color: white;">
+                    =
+                </button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
