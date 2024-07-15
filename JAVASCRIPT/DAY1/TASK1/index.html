@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of two numbers</title>
+</head>
+<body>
+    <table style="border: 1px solid black;">
+        <tr>
+            <td><label for="element1">Number1</label></td>
+            <td><input type="text" name="number1" id="num1"></td>
+        </tr>
+        <tr>
+            <td><label for="element2">Number2</label></td>
+            <td><input type="text" name="number2" id="num2"></td>
+        </tr>
+        <tr >
+            <td colspan="2"><input type="button" id="butt"  value="sum" onclick="show()"></td>
+        </tr>
+        <tr>
+            <td><label for="element3">SUM</label></td>
+            <td><input type="text" name="sum" id="sumT"></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
+<script>
+   function show(){
+    var a,b,c;
+    a=value.document.getElementById('num1');
+    b=value.document.getElementById('num2');
+    c=a+b;
+    value.document.getElementById('sumT')=c;
+   }
+</script>

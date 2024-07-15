@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK1
+    </title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            height: 500px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 0px 70px 70px 0px;
+            background-color: lightcoral;
+            animation-name: MyAni;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes MyAni{
+            0%{
+                
+            }
+            15%{
+                border-radius: 0px 50px 0px 0px;
+                transform: rotate(-45deg);
+            }
+            30%{
+                transform: rotate(-90deg);
+                border-radius: 0px 0px 0px 0px;     
+            }
+            45%{
+                transform: rotate(-45deg);
+                border-radius: 0px 70px 7px 0px;
+            }
+            60%{
+                border-radius: 0px 70px 70px 0px;
+                transform: rotate(0deg);
+            }
+            75%{
+                border-radius: 0px 100px 100px 100px;
+                transform: rotate(45deg);
+            }
+            90%{
+                border-radius: 100px;
+            }
+            100%{
+                border-radius: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

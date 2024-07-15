@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 2 JS</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><h3>IMAGE SLIDER</h3></td>
+        </tr>
+        <tr>
+        <td rowspan="3" colspan="4">
+            <img src="https://www.svgrepo.com/show/402888/waving-hand.svg" alt="pic" id="slideshow" height="200px" width="200px"  >
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="button" value="start" onclick="start()"></td>
+            <td colspan="2"><input type="button" value="stop" onclick="stop()"></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    var images=["https://www.svgrepo.com/show/402888/waving-hand.svg","https://www.svgrepo.com/show/401099/american-football.svg","https://www.svgrepo.com/show/401103/angry-face-with-horns.svg"];
+    var i=0,x;
+    function start(){
+        x=setInterval(changeImage,1000);
+    }
+    function changeImage(){
+        document.getElementById("slideshow").src= images[i];
+        i++;
+        if(i==3){
+            i=0;
+        }
+    }
+    function stop(){
+        clearInterval(x);
+    }
+</script>

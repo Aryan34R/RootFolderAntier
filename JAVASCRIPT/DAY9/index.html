@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>company intro</title>
+    <style>
+        #error{
+            color: red;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(158, 158, 249);">
+    <!-- <h1>COMP SELECT</h1>
+    NAME <input type="text" id="nm" placeholder="Name Please!"> <br>
+    AGE <input type="text" id="age" placeholder="AGE Please!"> <br>
+    GENDER <input type="radio" id="male" value="male" name="gender">MALE <input type="radio" id="female" value="female" name="gender">FEMALE <br>
+    <input type="button" value="SUBMIT" onclick="check()">
+    <input type="button" value="RESET" onclick="reset()">
+    <div id="error"></div> -->
+    <table style="border: 2px solid black;">
+        <tr >
+            <td colspan="2" style="border: 2px solid black;"><h1>COMP SELECT</h1></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid black;">NAME</td>
+            <td style="border: 2px solid black;"><input type="text" id="nm" placeholder="Name Please!"></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid black;">AGE</td>
+            <td style="border: 2px solid black;"><input type="text" id="age" placeholder="AGE Please!"></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid black;">
+                GENDER
+            </td>
+            <td style="border: 2px solid black;">
+                <input type="radio" id="male" value="male" name="gender">MALE <input type="radio" id="female" value="female" name="gender">FEMALE
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid black;"><input type="button" value="SUBMIT" onclick="check()"></td>
+            <td style="border: 2px solid black;"><input type="button" value="RESET" onclick="reset()"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border: 2px solid black;"><div id="error"></div></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+function check(){
+    if(nm.value==""){
+    error.innerHTML="NAME REQUIRED! ";
+    }
+    if(age.value==""){
+          error.innerHTML+="AGE REQUIRED! ";
+    }
+    else if(age.value<20 || age.value>30){
+        error.innerHTML+="NOT IN AGE LIMIT! "
+    }
+    if(!male.checked && !female.checked){
+        error.innerHTML+="SELECT A GENDER! "
+    }
+    }
+    function reset(){
+        nm.value="";
+        age.value="";
+        male.checked="";
+        female.checked="";
+
+    }
+</script>

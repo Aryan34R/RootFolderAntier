@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> TASK 1 JS </title>
+</head>
+<body>
+    <table>
+        <tr style="text-align: center;">
+            <td colspan="3"><h4>CLOCK</h4></td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="hours" id="H"></td>
+            <td><input type="text" placeholder="minutes" id="M"></td>
+            <td><input type="text" placeholder="seconds" id="S"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Start" onclick="start()"></td>
+            <td><input type="button" value="Stop" onclick="stop()"></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+
+   function start()
+   {
+    x=setInterval(start_clock,1000)
+   }
+   function start_clock()
+   {
+    var hour=new Date()
+   document.getElementById("H").value=hour.getHours();
+   document.getElementById("M").value=hour.getMinutes();
+   document.getElementById("S").value=hour.getSeconds();
+   }
+   function stop(){
+    clearInterval(x);
+   }
+</script>

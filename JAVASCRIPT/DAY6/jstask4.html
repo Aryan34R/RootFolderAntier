@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 4 JS</title>
+</head>
+<body>
+    <table style="border: 1px solid black; align-items: center;">
+        <tr style="align-items: center;">
+            <td colspan="3">STOP-WATCH</td>
+        </tr>
+        <tr>
+            <td><input type="text" name="hour" id="hours" placeholder="hour"></td>
+            <td><input type="text" name="minute" id="minutes" placeholder="minutes"></td>
+            <td><input type="text" name="second" id="seconds" placeholder="seconds"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="start" value="Start" onclick="start()"></td>
+            <td><input type="button" name="stop" value="Stop" onclick="stop()"></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    var x;
+    function start(){
+       x=setInterval(changetime,1000)
+    }
+    function changetime(){
+        
+    }
+</script>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK2</title>
+    <style>
+         body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            height: 500px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 100px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            border: 2.5px solid green;
+            border-radius: 50px;
+            color: green;
+            background-color: white;
+            font-size: 15px;
+            font-weight: 500;
+            z-index: +1;
+            animation-name:MyAni;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(.25,-0.91,.44,.87);
+        
+           }
+        
+        @keyframes MyAni{
+            0%{
+                background-color: white;
+                color: green;
+                border-color: green;
+            }
+            10%{
+                background-color: green;
+                color: white;
+            }
+            20%{
+                background-color: green;
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                color: green;
+                
+            }
+            100%{
+                background-color: green;
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                color: green;
+                z-index: -1;
+            }
+        }     
+        .box2{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 100px;
+            color: green;
+            opacity: 0;
+            animation-name:MyAni2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            z-index: -1;
+        }  
+        .box2 img{
+            height: 100%;
+            width: 100%;
+        }
+        @keyframes MyAni2{
+            0% {
+                opacity: 0;
+            }
+            90% {
+                opacity: 1;
+                z-index: +1;
+                
+            }
+            100% {
+                opacity: 1;
+                z-index: +1;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+       <div class="box">BUTTON</div>
+       <div class="box2">
+        <img src="https://www.svgrepo.com/show/513860/tick.svg" alt="pic">
+       </div>
+    </div>
+</body>
+</html>

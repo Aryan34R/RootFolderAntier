@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill
+    </title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <h4>Electricity Bill</h4>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="nam">Customer Name</label></td>
+            <td><input type="text" id="nam"></td>
+        </tr>
+        <tr>
+            <td><label for="lmr">Last Meter Reading</label></td>
+            <td><input type="text" id="lmr"></td>
+        </tr>
+        <tr>
+            <td><label for="cmr">Current Meter Reading</label></td>
+            <td><input type="text" id="cmr"></td>
+        </tr>
+        <tr>
+            <td><label for="tu">Total Units</label></td>
+            <td><input type="text" id="tu"></td>
+        </tr>
+        <tr>
+            <td><label for="ba">Bill Amount</label></td>
+            <td><input type="text" id="ba"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="submit" onclick="submit()"></td>
+            <td><input type="button" value="reset" onclick="reset()"></td>
+        </tr>
+
+    </table>
+</body>
+</html>
+<script>
+    function submit(){
+        var count1,count2,diffunits,amount1,amount2,amount3;
+        count1=document.getElementById("lmr").value;
+        count2=document.getElementById("cmr").value;
+        diffunits=parseInt(count2)-parseInt(count1);
+        document.getElementById("tu").value=diffunits;
+        if(diffunits<200){
+            document.getElementById("ba").value=0;
+        }
+        else if(diffunits>=200 &&  diffunits<=500){
+            amount1=(diffunits-200)*1.20;
+            document.getElementById("ba").value=amount1;
+        }
+        else if(diffunits>=501 &&   diffunits<=1000){
+            amount2=((diffunits-500)*2.5)+360;
+            document.getElementById("ba").value=amount2;
+        }
+        else{
+            amount3=((diffunits-1000)*3)+860;
+            document.getElementById("ba").value=amount3;
+        }
+    }
+    function reset(){
+        document.getElementById("nam").value=" ";
+        document.getElementById("lmr").value=" ";
+        document.getElementById("cmr").value=" ";
+        document.getElementById("tu").value=" ";
+        document.getElementById("ba").value=" ";
+
+    }
+</script>
