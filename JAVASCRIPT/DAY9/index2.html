@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION TASK 2</title>
+    <style>
+        #error1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table style="border: 1px solid black;">
+        <tr>
+            <td style="border: 1px solid black;">
+                <label for="name">NAME:</label>
+            </td>
+            <td style="border: 1px solid black;">
+                <input type="text" id="name" placeholder="ENTER NAME">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border: 1px solid black;">
+                <div id="error1"></div>
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">
+                <label for="email">EMAIL:</label>
+            </td>
+            <td style="border: 1px solid black;">
+                <input type="text" id="email" placeholder="ENTER EMAIL">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="error2"></div>
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid black;">
+                <label for="pass">PASSWORD:</label>
+            </td>
+            <td style="border: 1px solid black;">
+                <input type="password" id="pass" placeholder="ENTER PASSWORD">
+            </td>
+            <tr>
+                <td colspan="2">
+                    <div class="error3"></div>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="SUBMIT" onclick="show()"></td>
+                <td><input type="button" value="RESET" onclick="reset()"></td>
+            </tr>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+   
+    function show(){
+        var nam=document.getElementById("name").value;
+        var ema=document.getElementById("email").value;
+        var pas=document.getElementById("pass").value;
+        error1.innerHTML="";
+        error2.innerHTML="";
+        error3.innerHTML="";
+        if(nam===""){
+              error1.innerHTML+="NAME REQUIRED!";
+        }
+        else if(nam.length < 3){
+            error1.innerHTML+="NAME IS SHORT!";
+        }
+        if(ema===""){
+            error2.innerHTML+="EMAIL REQUIRED!";
+        }
+        else if(!validateEmail(email)){
+            error2.innerHTML+="EMAIL IS NOTVALID"
+        }
+        if (pas === "") {
+                document.getElementById("error3").innerHTML = "PASSWORD REQUIRED!";
+            } else if (pas.length < 6) {
+                document.getElementById("error3").innerHTML = "PASSWORD IS TOO SHORT!";
+            }
+            
+        }
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return re.test(String(email).toLowerCase());
+        }
+    
+   
+
+</script>

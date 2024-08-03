@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF</title>
+</head>
+<body>
+    <button type="submit" onclick="show()">Download Now</button>
+    
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!-- CDN==content delivery -->
+<script>
+    function show(){
+       const {jsPDF} = window.jspdf;
+       var doc = new jsPDF();
+       doc.text("Hello",10,10)
+       // L-R T-B, L/T/R/B
+       doc.save("mypdf.pdf");
+    }
+</script>

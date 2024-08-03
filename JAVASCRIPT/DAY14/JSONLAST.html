@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // let stud={
+    //     id:1,
+    //     name:"aryan",
+    //     marks:[20,30,40],
+    //     show: function(){
+    //         var sum=0;
+    //         sum=this.marks[0]+this.marks[1]+this.marks[2];
+    //         return sum;s
+    //     }
+    // }
+    // console.log(`${stud.id}`)
+    // console.log(`${stud.name}`);
+    // console.log(`${stud.marks.join(`+`)}`);
+    // console.log(`${stud.show()}`);
+
+    let product={
+        id:1,
+        name:"Naveen",
+        price:[20,30,40],
+        quantity:[2,4,6],
+        bill1 : function(){
+            var bill_amount_item1=0;
+            // var bill_amount_item2=0;
+            // var bill_amount_item3=0;
+            bill_amount_item1=this.price[0]*this.quantity[0] 
+           
+            return bill_amount_item1;
+            // return bill_amount_item2;
+            // return bill_amount_item3;
+        },
+        bill2:function(){
+            var bill_amount_item2=0;
+            bill_amount_item2=this.price[1]*this.quantity[1];
+            return bill_amount_item2;
+        },
+        bill3:function(){
+            var bill_amount_item3=0;
+            bill_amount_item3=this.price[2]*this.quantity[2];
+            return bill_amount_item3;
+        },
+        Sumofall : function(){
+            var sum=0;
+            sum=this.price[0]*this.quantity[0]+this.price[1]*this.quantity[1]+this.price[2]*this.quantity[2];
+            return sum;
+        }
+    }
+    document.write(`${product.price.join(` `)}`);
+    document.write("</br>");
+    document.write(`${product.quantity.join(` `)}`);
+    document.write("</br>");
+    document.write(` 0th index price ${product.bill1()}`);
+    document.write("</br>");
+    document.write(` 1st index price ${product.bill2()}`);
+    document.write("</br>");
+    document.write(`2nd index price ${product.bill3()}`);
+    document.write("</br>");
+
+    document.write(`sum of all ${product.Sumofall()}`);
+</script>

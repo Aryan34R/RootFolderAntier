@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL PRODUCTS</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+   async function show(){
+    let uri="https://dummyjson.com/carts";
+    let response = await fetch(uri)
+    let data= await response.json()
+    // console.warn(data) 
+    data.carts.forEach((record,index)=>{
+        document.write(`record - ${record.total}`)
+        document.write(`distotal - ${record.discountedTotal}`)
+        document.write(`<br/>`)
+    })
+   }   
+   window.onload=show;
+</script>

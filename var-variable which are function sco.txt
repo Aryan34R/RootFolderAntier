@@ -1,0 +1,118 @@
+var-variable which are function scoped.
+let, const- block scoped variable.
+
+var variable can be reassigned multiple time. 
+VAR- A variable points to a specific memory address that stores a value. Variables are given a name which can be used throughout your code to access that value.
+
+Variable naming follows specific rules: names can include letters, numbers, dollar signs, and underscores, but cannot contain spaces and must not begin with a number.
+
+*Assigning a value to a variable at the moment of its declaration is known as initialization.
+
+When a variable is declared with the let keyword, you can reassign (or change the value of) that variable later on.
+
+cons- we can accidently redeclare the existing variable
+      var let us use variable even before we used it.
+
+const and let are exactly same but const does not redeclare.
+
+Note that strings are immutable, which means once they are created, they cannot be changed. The variable can still be reassigned another value.
+
+The console allows you to print and view JavaScript output. You can send information to the console using console.log().
+
+The default value of an uninitialized variable is undefined. This is a special data type that represents a value that does not have a definition yet.
+
+
+*******************************************************************************************************************************************************************************************
+An array is a non-primitive data type that can hold a series of values. Non-primitive data types differ from primitive data types in that they can hold more complex data. Primitive data types like strings and numbers can only hold one value at a time.
+
+Arrays are denoted using square brackets ([]). Here is an example of a variable with the value of an empty array:
+You can access the values inside an array using the index of the value. An index is a number representing the position of the value in the array, starting from 0 for the first value.
+
+You can access the value using bracket notation, such as array[0].
+Arrays are special in that they are considered mutable. This means you can change the value at an index directly.
+
+A method in JavaScript is a function that's associated with certain values or objects. An example you've already encountered is the .log() method, which is part of the console object.
+Arrays have their own methods, and the first you will explore is the .push() method. This allows you to "push" a value to the end of an array.
+Another method essential for this project is the .pop() method. It removes the last element from an array and returns that element.
+
+Declaring a variable with the let keyword allows it to be reassigned. This means you could change character later to be a completely different value.
+
+For this project, you will not want to change these variable values. So instead, you should use const to declare them. const variables are special.
+
+First, a const variable cannot be reassigned like a let variable. This code would throw an error:
+A const variable also cannot be uninitialized. This code would throw an error:
+
+ When you have to perform a task repeatedly until a condition is met, you will use a loop. There are many ways to write a loop.
+Specifically, a for...of loop, which iterates over each item in an iterable object and temporarily assigns it to a variable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JSON-JavaScript object-work on key-value.
+Store object.
+Data Representation Format.
+Commonly used for API's and configs.
+JSON supports string, numbers, Booleans, null, arrays, objects.
+
+{
+	"key": "value",
+	"key": "value"
+}
+string value will be placed inside "" while numbers and Boolean dont need "".
+arrays in json-> "hobbies": ["gym", "cricket"].
+multiple user objects in single key->
+"friend": [{
+	"name": "joey",
+	"favouriteNumber": 100,
+	"isProgrammer": false,
+	"friends": [{....}]
+	   }]
+
+
+
+
+
+let person={
+id:7,
+name: "JOHN",
+city: "Jaipur",
+}
+
+for in
+for(let y in person)
+y will get all values of person(is,name,city).
+let x+= y + " ";
+x+="<br/>"
+
+
+MERGE
+let product1 ={
+id:1,
+name: "ax",
+cost:6000,
+year:2023
+}
+let product2 ={
+id:2,
+name: "bx",
+cost:8000,
+year:2024 
+}
+
+for each
+let product_all = [

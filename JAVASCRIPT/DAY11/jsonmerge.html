@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merging two json objects</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let product1={
+        id:1,       
+        name:"Aryan",
+        price:2000,
+        warranty:"1 Year"
+    }
+    let product2={
+        id:2,
+        name:"Sharma",
+        price:3000,
+        warranty:"2 Year"
+    }
+    let product_all=[product1,product2] ;
+    product_all.forEach(rec=>{
+       
+        document.write(rec.warranty + " ");
+        //this will print Aryan Sharma.
+    })
+</script>

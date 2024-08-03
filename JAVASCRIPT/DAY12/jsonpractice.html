@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON PRACTICE</title>
+</head>
+<body>
+
+</body>
+</html>
+<!-- <script>
+    let person=[{
+        id:1,
+        name:"aryan",
+        age:22
+    },
+    {
+        id:2,
+        name:"mehul",
+        age:23
+    },
+    {
+        id:3,
+        name:"sonu",
+        age:27
+    }]
+    var bubble=person.filter(record=>(record.name=='sonu'));
+    document.write(bubble[0].name)
+    console.log(bubble)
+</script> -->
+<script>
+     let person=[{
+        id:1,
+        name:"aryan",
+        age:22
+    },
+    {
+        id:2,
+        name:"mehul",
+        age:23
+    },
+    {
+        id:3,
+        name:"sonu",
+        age:27
+    }]
+    var bubble=person.map(record=>(record.name+=' sharma'));
+    console.log(bubble);
+
+    person.forEach(record =>{
+        document.write(record.name + "<br>");
+    })
+</script>

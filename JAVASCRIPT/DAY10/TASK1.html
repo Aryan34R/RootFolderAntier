@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 10 TASK</title>
+</head>
+<body>
+    <div class="container">
+        <table style="border: 1px solid black;width: 400px;height: 400px;background-color: rgb(220, 106, 106);">
+            <tr>
+                <td colspan="4" style="border: 1px solid black;text-align: center;font-style: italic;"><h2>SHOPPING CART</h2></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">AVAILABLE</td>
+                <td colspan="2" style="text-align: center;">SELECTED</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select name="" id="avail" multiple style="text-align: center;height: 100px;width: 100px;margin-left: 30px;background-color: rgb(220, 106, 106);border: 2px solid black;">
+                        <option value="">
+                            PEN
+                        </option>
+                        <option value="">
+                            INK
+                        </option>
+                        <option value="">
+                            POWDER
+                        </option>
+                    </select>
+                </td>
+                <td colspan="2">
+                    <select name="" id="pur" multiple style="text-align: center;height: 100px;width: 100px;margin-left: 30px;background-color: rgb(220, 106, 106);border: 2px solid black;">
+                        <!-- <option value="">
+                        </option>
+                        <option value="">
+                        </option>
+                        <option value="">
+                        </option> -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="button" value=">" style="margin-left: 90px;background-color: rgb(220, 106, 106);border: 3px solid black;" onclick="show()">
+                    <input type="button" value="<" style="margin-left: 160px;background-color: rgb(220, 106, 106);border: 3px solid black;" onclick="show2()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border: 1px solid black;text-align: center;">
+                    <label for="quant">Quantity:</label>
+                    <input type="text" id="quant" style="width: 20px;background-color: rgb(220, 106, 106);border: 3px solid black;">
+                </td>
+                
+                <td colspan="2" style="border: 1px solid black;text-align: center;">
+                    <label for="bill">Bill:</label>
+                    <input type="text" id="bill" style="width: 20px;background-color: rgb(220, 106, 106);border: 3px solid black;">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<script>
+    var list_avail=document.getElementById("avail");
+    var list_pur=document.getElementById("pur");
+    var b=0;
+    function show(){
+        var new_item=document.createElement("option");
+        new_item.text=list_avail.options[list_avail.selectedIndex].text;
+        list_pur.add(new_item);
+        quant.value=list_pur.length;
+        if(new_item.text=="PEN"){
+            b=b+10;
+        }
+        else if(new_item.text=="INK"){
+            b=b+20;
+        }
+        else{
+            b=b+30;
+        }
+        bill.value=b;
+    }
+    function show2(){
+        var new_item=document.createElement("option");
+        new_item.text=list_pur.options[list_pur.selectedIndex].text;
+        list_pur.remove(list_pur.selectedIndex);
+        quant.value=list_pur.length;
+       
+        if(new_item.text=="PEN"){
+            b=b-10;
+            
+        }
+        else if(new_item.text=="INK"){
+            b=b-20;
+            
+        }
+        else{
+            b=b-30;
+            
+        }
+        bill.value=b;
+    }
+</script>

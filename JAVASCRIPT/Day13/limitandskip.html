@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="record"></div>
+</body>
+</html>
+<script>
+   async function show(){
+    const uri="https://dummyjson.com/products?limit=3&skip=5&select=title,price,description";
+    const response = await fetch(uri);
+    const data = await response.json();
+    const rec=document.getElementById("record");
+    data.products.forEach(result => {
+        rec.innerHTML+=`<p>${result.title}</p>
+        <hr>
+        <h1>${result.price}</h1>
+        <h2>${result.description}</h2>`;
+
+    })
+    console.log(data);
+
+    }
+    window.onload=show;
+</script>

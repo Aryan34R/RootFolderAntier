@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <div id="record">
+
+    </div>
+</body>
+</html>
+<script>
+  async function show(){
+        const uri="https://dummyjson.com/products/1"
+        const response= await fetch(uri)
+        // console.log(response);
+        // response.JSON()
+        const data = await response.json()
+        // console.log(data);
+        const result=document.getElementById("record")
+        // result.innerHTM<L="<h1>"+ data.title+"</h1>";
+        // result.innerHTML="<h1>"+data.id+"</h1><h2>"+data.title+"</h2><h2>"+data.description+"</h2><h2>"+data.price+"</h2>";
+        result.innerHTML=`<h1>${data.id}</h1><h2>${data.title}</h2><h3>${data.description}</h3><h4>${data.price}</h4>`
+    }
+    window.onload=show;
+</script>

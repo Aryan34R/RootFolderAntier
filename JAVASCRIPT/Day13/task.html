@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE TASK
+        JSON
+    </title>
+    <style>
+        #record td{
+            border: 1px solid black;
+            /* border-collapse: collapse; */
+        }
+        /* #record :nth-child(even){
+            background-color: yellow;
+        }
+        #record :nth-child(odd){
+            background-color: red; */
+        tbody tr:nth-child(even) {
+            background-color: yellow;
+        }
+        tbody tr:nth-child(odd){
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+   <!-- <div id="record"></div>  -->
+    <table>
+        
+        <tr style="background-color: blue;">
+            <td>ID</td>
+            <td>NAME</td>
+            <td>Price</td>
+            <td>Desc</td>
+        </tr>
+        <tbody id="record"></tbody>
+        <!-- 
+
+        <tr style="border: 1px solid black;">
+            <td rowspan="10" style="border: 1px solid black;">
+                <div id="idcol"></div>
+            </td>
+            <td rowspan="10" style="border: 1px solid black;">
+                <div id="nmcol"></div>
+            </td>
+            <td rowspan="10" style="border: 1px solid black;">
+                <div id="prcol"></div>
+            </td>
+            <td rowspan="10" colspan="10" style="border: 1px solid black;">
+                <div id="desccol"></div>
+            </td>
+        </tr> -->
+    </table>
+</body>
+</html>
+<script>
+
+    async function show(){
+        const uri = "https://dummyjson.com/products?limit=5&select=id,title,price,description"
+        const response = await fetch(uri);
+        const data = await response.json();
+        const rec = document.getElementById("record");
+        // const idh=document.getElementById("idcol");
+        // const nmh=document.getElementById("nmcol");
+        // const prh=document.getElementById("prcol");
+        // const deh=document.getElementById("desccol");
+
+        // data.products.forEach(result => {
+        // idh.innerHTML+=`<p>${result.id}</p>`;
+        // })
+        // data.products.forEach(result =>{
+        //     nmh.innerHTML+=`<p>${result.title}</p>`;
+        // })
+        // data.products.forEach(result =>{
+        //     prh.innerHTML+=`<p>${result.price}</p>`;
+        // })
+        // data.products.forEach(result =>{
+        //     deh.innerHTML+=`<p>${result.description}</p>`;
+        // })
+        data.products.forEach(result =>{
+            rec.innerHTML+= `<tr><td>${result.id}</td><td>${result.title}</td>
+                <td>${result.price}</td><td>${result.description}</td></tr>`
+        });
+        // console.log(data);
+    }
+    window.onload= show;
+</script>

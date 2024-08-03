@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTCHA
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .main{
+            height: 200px;
+            width: 600px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            background-color: rgb(219, 219, 47);
+        }
+        .content4{
+            height: 5px;
+            width: 10px;
+        }
+        .content1{
+            background-color: orange;
+        }
+        .content3{
+            background-color: orangered;
+        }
+        .box1{
+            height: 100px;
+            width: 200px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 10px 10px 0px gray;
+            
+        }
+        .box2{
+            height: 100px;
+            width: 200px;
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 10px 10px 0px gray;
+            font-size: 25px;
+            text-decoration: double line-through;
+        }
+        #submit{
+            background-color: red;
+            border: 2px solid green;
+            box-shadow: 10px 10px 10px 0px gray;
+        }
+        #box4{
+            /* border: 1px solid black; */
+            height: 34px;
+            width: 100px;
+            position: absolute;
+            top: 156px;
+            left: 20px;
+            font-size:12px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="content1">
+            <div class="box1"><input type="text" id="inElement"></div>
+        </div>
+        <div class="content2">
+           <button onclick="show()"> <i style="font-size:24px" class="fa">&#xf021;</i></button>
+        </div>
+        <div class="content3">
+            CaPtCa
+          <div class="box2" id="out">
+            <!-- <input type="text" id="showArea" height="10px" width="50px"> -->
+          </div>
+        </div>
+        <div class="content4">
+            <button id="submit" onclick="show1()">
+                Submit
+            </button>
+        </div>
+        <div id="box4"></div>
+    </div>
+    
+</body>
+</html>
+<script>
+   
+    function show() {
+        const List="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var code= "";
+        for(let i=0;i<4;i++)
+    {
+        let store = List.charAt(Math.floor(Math.random() * List.length));
+        code=code+store;
+    }
+    // document.getElementById('out').style.textDecoration.strike;
+    document.getElementById('out').innerHTML= code;
+    
+    }
+    function refresh(){
+        show();
+        // document.getElementById("box4").value="";
+    }
+    function show1(){
+        var a=document.getElementById("inElement").value;
+        var b=document.getElementById("out").value;
+        if(a==b){
+            // document.getElementById("box4").innerHTML+="captcha matched";
+            alert("Matched");
+        }
+        else if(a==""){
+           // document.getElementById("box4").innerHTML+="captcha not present";
+           alert("Captcha Not present");
+        }
+        else{
+           // document.getElementById("box4").innerHTML+="captcha NOT matched";
+            alert("Captcha Not Matched");
+            show();
+           
+                }
+    }
+    window.onload=show();
+    
+
+</script>

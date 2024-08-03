@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 10 TASK2</title>
+    <style>
+        .container{
+        height: 500px;
+        width: 500px;
+        border: 2px solid black;
+    }
+    .box1{
+        /* border: 2px solid black; */
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .box2{
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <label for="bud">BUDGET:</label>
+            <input type="text" id="bud">
+        </div>
+        <div class="box2">
+            <label for="EE">Enter Expenditure:</label>
+            <input type="text" id="EE">
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+           &nbsp; &nbsp;
+           <input type="button" id="add" value="+"  style="border-radius: 12px;border: 1px solid black;background-color: red;" onClick="show()">
+           &nbsp;&nbsp;
+           <input type="button" id="sub" value="-" onClick="reset()"  style="border-radius: 12px;border: 1px solid black; background-color: yellow;">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var new_div=document.getElementById("box2");
+    var new_item=0;
+    function show(){
+        var new_item=document.createElement("option");
+        new_item.text=new_div.options[new_div.selectedIndex];
+        new_div.add(new_item);
+        
+    }
+</script>
